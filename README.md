@@ -21,7 +21,7 @@ Steps:
 1. Fork this repository to your own GitHub account.
 2. Clone the fork of the repository to your laptop.
 3. Go into that directory from the command line.
-4. Write a bash script named `01_setup_project.sh` to create the following directory and file structure. You can use `curl -L http://npk.io/PUlBaY+ -o fasta_archive.zip` to get the raw data, which are a set of three fasta files compressed together. To unzip these files, you can use the `unzip` command. The syntax is `unzip fasta_archive.zip`. Windows (Ubuntu) users may have to first run `sudo apt install unzip` to install the `unzip` program. Once you have downloaded and unzipped the archive, you can delete it, so only the three uncompressed files remain.
+4. Write a bash script named `01_setup_project.sh` to create the following directory and file structure. You can use `curl -L http://npk.io/PUlBaY+ -o fasta_archive.zip` to get the raw data, which are a set of three fasta files compressed together. To unzip these files, you can use the `unzip` command. The syntax is `unzip fasta_archive.zip`, and you can check the other options for this command using the manual via `man unzip`. Use `q` to quit out of the manual. Windows (Ubuntu) users may have to first run `sudo apt install unzip` to install the `unzip` program. Once you have downloaded and unzipped the archive, you can delete it, so only the three uncompressed files remain.
 
 ```
    .
