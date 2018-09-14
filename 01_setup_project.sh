@@ -17,4 +17,10 @@ unzip fasta_archive.zip -d data/raw_data/
 
 # Remove unzipped fasta file from directory
 echo "Removing unzipped fasta file"
-rm fasta_archive.zip 
+rm fasta_archive.zip
+
+# Adding invisible .gitkeep files in empty directories
+echo "Adding invisible .gitkeep files"
+touch output/figures/.gitkeep
+touch output/tables/.gitkeep
+touch code/.gitkeep
