@@ -19,8 +19,12 @@ unzip fasta_archive.zip -d data/raw_data/
 echo "Removing unzipped fasta file"
 rm fasta_archive.zip
 
-# Adding invisible .gitkeep files in empty directories
+# Add invisible .gitkeep files in empty directories
 echo "Adding invisible .gitkeep files"
 touch output/figures/.gitkeep
 touch output/tables/.gitkeep
 touch code/.gitkeep
+
+# Create second bash script in code folder
+echo "Creating second bash script in code folder"
+touch code/02_count_sequences.sh
