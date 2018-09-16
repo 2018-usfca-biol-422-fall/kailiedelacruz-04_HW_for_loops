@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!sh/bash/dash/ksh
 
 # Script to create a directory and file structure
 # Initially created by Kailie Dela Cruz
