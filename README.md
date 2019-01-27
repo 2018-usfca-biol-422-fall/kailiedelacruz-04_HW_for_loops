@@ -21,7 +21,7 @@ Steps:
 1. Fork this repository to your own GitHub account.
 2. Clone the fork of the repository to your laptop.
 3. Go into that directory from the command line.
-4. Write a bash script named `01_setup_project.sh` to create the following directory and file structure. You can use `curl -L http://npk.io/PUlBaY+ -o fasta_archive.zip` to get the raw data, which are a set of three fasta files compressed together. To unzip these files, you can use the `unzip` command. The syntax is `unzip fasta_archive.zip`, and you can check the other options for this command using the manual via `man unzip`. Use `q` to quit out of the manual. Windows (Ubuntu) users may have to first run `sudo apt install unzip` to install the `unzip` program. Once you have downloaded and unzipped the archive, you can delete it, so only the three uncompressed files remain.
+4. Write a bash script named `01_setup_project.sh` to create the following directory and file structure. You can use `curl -L http://npk.io/PUlBaY+ -o fasta_archive.zip` to get the raw data, which are a set of three fasta files compressed together. To unzip these files, you can use the `unzip` command. The syntax is `unzip fasta_archive.zip`. Windows (Ubuntu) users may have to first run `sudo apt install unzip` to install the `unzip` program. Once you have downloaded and unzipped the archive, you can delete it, so only the three uncompressed files remain.
 
 ```
    .
@@ -87,6 +87,6 @@ The file data/raw_data/example3.fasta has 8 sequences in it.
 
 **Infrastructure for Automated Software Testing**
 
-* .travis.yml: a configuration file for automatically running continuous integration checks when you submit your pull request, to verify reproducibility of all .sh script files in the repo. If all pass linting (or code style and syntax checks), then the "Build Status" badge above will be green (build success), otherwise it will be red (build failure). You can click on it and scroll to the bottom to see what went wrong and therefore what to fix.
+* .travis.yml: a configuration file for automatically running continuous integration checks when you submit your pull request, to verify reproducibility of all .Rmd notebooks in the repo. If all .Rmd notebooks can render successfully and pass linting (or code style and syntax checks), then the "Build Status" badge above will be green (build success), otherwise it will be red (build failure).
 
 **NOTE:** One challenge you may run into is working with the code file `02_count_sequences.sh` and the fasta files in two different directories. There are several ways to make it work, but all require you to be aware of the paths to the script and to the data files in relation to your working directory. As an example, if you are at the highest level in your project directory (i.e. where `ls` will show you `code`, `data`, etc), you can run the script with `bash code/02_count_sequences.sh data/raw_data/example.fasta`. Or, you could change your working directory to be the `raw_data` folder, and run the script like so: `bash ../../code/02_count_sequences.sh example.fasta`. Either is fine with me. The code in the script should be the same in either case, although the outputs will be slightly different.
